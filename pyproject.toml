@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pandas-express"
+version = "0.1.0"
+description = "A verbose, talkative pandas DataFrame extension"
+readme = "README.md"
+license = {text = "GPL-3.0-or-later"}
+authors = [
+    {name = "NDNnerd"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+keywords = ["pandas", "dataframe", "data-analysis", "verbose", "error-handling"]
+dependencies = [
+    "pandas>=1.3.0",
+]
+requires-python = ">=3.8"
+
+[project.urls]
+"Homepage" = "https://github.com/NDNnerd/pandas-express"
+"Bug Reports" = "https://github.com/NDNnerd/pandas-express/issues"
+"Source" = "https://github.com/NDNnerd/pandas-express"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",
+    "black",
+    "isort",
+    "flake8",
+]
+
+[tool.setuptools]
+packages = ["pandasExpress"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 88
